@@ -1,0 +1,33 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+npm-debug.log*
+*.log
+
+# Environment
+.env
+.env.*
+!.env.example
+!**/.env.example
+**/secrets.json
+**/appsettings.*.local.json
+*.pem
+*.pfx
+*.key
+.env.local
+.env.*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

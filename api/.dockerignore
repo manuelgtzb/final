@@ -1,0 +1,13 @@
+bin/
+obj/
+.git/
+.gitignore
+.env
+.env.*
+!.env.example
+*.user
+*.log
+Dockerfile*
+README*
+.DS_Store
+Thumbs.db

@@ -1,0 +1,21 @@
+{
+  "name": "landing-final",
+  "private": true,
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "build": "npm run build -w web",
+    "dev:web": "npm run dev -w web",
+    "build:web": "npm run build -w web",
+    "lint:web": "npm run lint -w web",
+    "dev:api": "dotnet run --project api",
+    "build:api": "dotnet build LandingFinal.sln",
+    "restore": "dotnet restore LandingFinal.sln && npm install"
+  },
+  "overrides": {},
+  "dependencies": {
+    "lucide-react": "^1.25.0",
+    "postcss": "^8.5.10"
+  }
+}

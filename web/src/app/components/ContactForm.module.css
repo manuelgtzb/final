@@ -1,0 +1,58 @@
+.budgetFields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.3fr);
+  gap: 20px;
+}
+
+.budgetFields select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 17px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 6px;
+  background: #17181a;
+  color: var(--white);
+  font: inherit;
+  outline: none;
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.budgetFields select:focus {
+  border-color: var(--gold);
+  background: #1b1a17;
+  box-shadow: 0 0 28px rgba(215, 170, 85, 0.08);
+}
+
+.turnstile {
+  min-height: 65px;
+}
+
+.status {
+  min-height: 22px;
+  margin: -8px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.success {
+  color: #d7aa55;
+}
+
+.error {
+  color: #ff9b8f;
+}
+
+.button:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.button:disabled::before {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .budgetFields {
+    grid-template-columns: 1fr;
+  }
+}

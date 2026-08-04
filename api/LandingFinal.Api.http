@@ -1,0 +1,19 @@
+@LandingFinal.Api_HostAddress = http://localhost:5182
+
+GET {{LandingFinal.Api_HostAddress}}/api/health
+Accept: application/json
+
+### Invalid request example: expected HTTP 400 without calling external services
+POST {{LandingFinal.Api_HostAddress}}/api/contact
+Content-Type: application/json
+Idempotency-Key: {{$guid}}
+
+{
+  "name": "A",
+  "email": "",
+  "phone": "",
+  "project": "short",
+  "budget": 0,
+  "currency": "EUR",
+  "turnstileToken": ""
+}
