@@ -145,7 +145,7 @@ export default function Home() {
         <ContactForm />
 
         <footer className="footer">
-          <a href="#" className="footerLogo"><img src="/LogoRoma.png" alt="Roma Digital" /></a>
+          <a href="#" className="footerLogo"><img src="/Romafooter.png" alt="Roma Digital" /></a>
           <p>{t.footer.copyright}</p>
           <div className="footerSocials">
             <a href="https://discord.com/users/779824297530097675" aria-label="Discord">dc</a>

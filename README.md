@@ -34,7 +34,7 @@ Los secretos del backend no deben guardarse en archivos del repositorio. Config√
 dotnet user-secrets set "Resend:ApiKey" "tu_api_key" --project api
 dotnet user-secrets set "ContactEmail:To" "destino@tu-dominio.com" --project api
 dotnet user-secrets set "ContactEmail:From" "ROMA LABS <contacto@tu-dominio-verificado.com>" --project api
-dotnet user-secrets set "ContactEmail:LogoUrl" "https://tu-dominio.com/LogoRoma.png" --project api
+dotnet user-secrets set "ContactEmail:LogoUrl" "https://tu-dominio.com/Romafooter.png" --project api
 dotnet user-secrets set "Turnstile:SecretKey" "tu_secret_key" --project api
 ```
 
@@ -105,7 +105,7 @@ En `Settings > Domains`, agrega:
 - `romalabs.xyz`
 - `www.romalabs.xyz`
 
-`web/public/LogoRoma.png` se publica como `/LogoRoma.png`.
+`web/public/Romafooter.png` se publica como `/Romafooter.png`.
 
 ## Produccion: Render
 
@@ -122,7 +122,7 @@ En `Environment`, agrega:
 Resend__ApiKey=tu_nueva_clave_resend
 ContactEmail__From=Roma Labs <projects@mail.romalabs.xyz>
 ContactEmail__To=tu_correo_destino
-ContactEmail__LogoUrl=https://romalabs.xyz/LogoRoma.png
+ContactEmail__LogoUrl=https://romalabs.xyz/Romafooter.png
 Turnstile__SecretKey=tu_secret_key
 AllowedOrigins__0=https://romalabs.xyz
 AllowedOrigins__1=https://www.romalabs.xyz
