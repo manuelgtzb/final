@@ -28,17 +28,33 @@ public static class ContactEmailTemplate
         var html = $$"""
             <!doctype html>
             <html lang="es">
-              <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
-              <body style="margin:0;padding:0;background-color:#151618;color:#f4f0e8;">
-                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background-color:#151618;">
+              <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width,initial-scale=1">
+                <meta name="color-scheme" content="dark">
+                <meta name="supported-color-schemes" content="dark">
+                <style>
+                  :root { color-scheme: dark; supported-color-schemes: dark; }
+                  @media (prefers-color-scheme: dark) {
+                    .email-background { background-color:#0b0c0e !important; background-image:linear-gradient(#0b0c0e,#0b0c0e) !important; }
+                    .email-card { background-color:#17181b !important; background-image:linear-gradient(#17181b,#17181b) !important; }
+                    .email-text { color:#f4f0e8 !important; }
+                  }
+                  [data-ogsc] .email-background, [data-ogsc].email-background { background-color:#0b0c0e !important; background-image:linear-gradient(#0b0c0e,#0b0c0e) !important; }
+                  [data-ogsc] .email-card, [data-ogsc].email-card { background-color:#17181b !important; background-image:linear-gradient(#17181b,#17181b) !important; }
+                  [data-ogsc] .email-text, [data-ogsc].email-text { color:#f4f0e8 !important; }
+                </style>
+              </head>
+              <body class="email-background" bgcolor="#0b0c0e" style="margin:0;padding:0;background-color:#0b0c0e;background-image:linear-gradient(#0b0c0e,#0b0c0e);color:#f4f0e8;">
+                <table class="email-background" role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#0b0c0e" style="width:100%;background-color:#0b0c0e;background-image:linear-gradient(#0b0c0e,#0b0c0e);">
                   <tr>
                     <td align="center" style="padding:32px 16px;">
-                      <table role="presentation" width="640" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:640px;background-color:#1c1d20;border:1px solid #d7aa55;">
+                      <table class="email-card" role="presentation" width="640" cellspacing="0" cellpadding="0" border="0" bgcolor="#17181b" style="width:100%;max-width:640px;background-color:#17181b;background-image:linear-gradient(#17181b,#17181b);border:1px solid #d7aa55;">
                         <tr><td style="padding:30px 32px 22px;border-bottom:1px solid #d7aa55;">{{brand}}</td></tr>
                         <tr>
-                          <td style="padding:32px;">
+                          <td class="email-text" style="padding:32px;color:#f4f0e8;">
                             <div style="font-family:Arial,sans-serif;font-size:11px;line-height:16px;font-weight:700;color:#d7aa55;">NUEVO CONTACTO</div>
-                            <h1 style="margin:8px 0 28px;font-family:Arial,sans-serif;font-size:27px;line-height:34px;font-weight:700;color:#ffffff;">SOLICITUD DE PROYECTO</h1>
+                            <h1 class="email-text" style="margin:8px 0 28px;font-family:Arial,sans-serif;font-size:27px;line-height:34px;font-weight:700;color:#f4f0e8;">SOLICITUD DE PROYECTO</h1>
                             {{Row("NOMBRE", safeName)}}
                             {{Row("EMAIL", safeEmail)}}
                             {{Row("TELÉFONO", safePhone)}}
@@ -48,7 +64,7 @@ public static class ContactEmailTemplate
                           </td>
                         </tr>
                         <tr>
-                          <td style="padding:18px 32px;background-color:#121315;border-top:1px solid #333438;font-family:Arial,sans-serif;font-size:11px;line-height:17px;color:#8f9298;">
+                          <td style="padding:18px 32px;background-color:#17181b;background-image:linear-gradient(#17181b,#17181b);border-top:1px solid #333438;font-family:Arial,sans-serif;font-size:11px;line-height:17px;color:#8f9298;">
                             Enviado de forma segura desde el formulario de Roma Labs.
                           </td>
                         </tr>
@@ -81,7 +97,7 @@ public static class ContactEmailTemplate
         <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;{{(isLast ? string.Empty : "border-bottom:1px solid #333438;")}}">
           <tr>
             <td width="135" valign="top" style="width:135px;padding:15px 12px 15px 0;font-family:Arial,sans-serif;font-size:11px;line-height:18px;font-weight:700;color:#d7aa55;">{{label}}</td>
-            <td valign="top" style="padding:15px 0;font-family:Arial,sans-serif;font-size:15px;line-height:23px;color:#f4f0e8;word-break:break-word;">{{value}}</td>
+            <td class="email-text" valign="top" style="padding:15px 0;font-family:Arial,sans-serif;font-size:15px;line-height:23px;color:#f4f0e8;word-break:break-word;">{{value}}</td>
           </tr>
         </table>
         """;
