@@ -21,7 +21,7 @@ export const translations = {
     projects: {
       tag: "PROJECTS", title: "Real Demos.", titleAccent: "Real Expectations",
       description: "Your page could look like this, or even better, ready to attract potential clients.",
-      titles: ["NORTAMA Landing Page", "PAMACEA", "Archery"], openLabel: "Open project",
+      titles: ["NORTAMA Landing Page", "PAMACEA", "Calendar"], openLabel: "Open project",
     },
     pricing: {
       tag: "PRICING", title: "Pick what you need,", titleAccent: "get exactly that.",
@@ -78,7 +78,7 @@ export const translations = {
     projects: {
       tag: "PROYECTOS", title: "Demos reales.", titleAccent: "Expectativas reales",
       description: "Tu página podría verse así, o incluso mejor, y estar lista para atraer clientes potenciales.",
-      titles: ["Landing Page NORTAMA", "PAMACEA", "Tiro con arco"], openLabel: "Abrir proyecto",
+      titles: ["Landing Page NORTAMA", "PAMACEA", "Calendario"], openLabel: "Abrir proyecto",
     },
     pricing: {
       tag: "PRECIOS", title: "Elige lo que necesitas,", titleAccent: "recibe exactamente eso.",

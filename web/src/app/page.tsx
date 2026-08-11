@@ -12,7 +12,7 @@ const serviceIcons = [CreditCard, MonitorDot, ShoppingCart, Brain];
 const projects = [
   { image: "/Nortama.png", url: "https://demo-landpage.netlify.app/" },
   { image: "/Pamacea.png", url: "https://www.pamacea.com.mx/" },
-  { image: "/projects/Nortama.png", url: "https://demo-landpage.netlify.app/" },
+  { image: "/calendario.png", url: "https://calendario-chi-orpin.vercel.app/" },
 ];
 
 const prices = [
