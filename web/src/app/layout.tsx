@@ -5,16 +5,21 @@ import LanguageProvider from "./components/LanguageProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://romalabs.xyz"),
-  title: "Roma Digital",
-  description: "Websites and landing pages designed to grow your business.",
+  title: "Roma Labs | Diseño y desarrollo web",
+  description: "Diseñamos landing pages y sitios web modernos para negocios de Tampico, Ciudad Madero y Altamira",
   alternates: {
     canonical: "/",
+  },
+
+  icons: {
+    icon: "/romaIcon.jpeg",
+    apple: "/apple-icon.jpeg",
   },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body>
         <LanguageProvider>{children}</LanguageProvider>
       </body>

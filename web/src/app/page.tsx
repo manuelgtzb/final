@@ -149,7 +149,7 @@ export default function Home() {
           <p>{t.footer.copyright}</p>
           <div className="footerSocials">
             <a href="https://discord.com/users/779824297530097675" aria-label="Discord">dc</a>
-            <a href="mailto:ricardoemmanuelgutierrezb@gmail.com" aria-label={t.footer.emailLabel}>✉</a>
+            <a href="mailto:supportromalabs@gmail.com" aria-label={t.footer.emailLabel}>✉</a>
           </div>
         </footer>
       </section>
