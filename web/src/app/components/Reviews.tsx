@@ -13,6 +13,7 @@ const reviews = [
   { name: "Jail", avatar: "/reviews/jail.avatar.png", comment: "/reviews/Jail.png" },
   { name: "James", avatar: "/reviews/james-avatar.png", comment: "/reviews/james.png" },
   { name: "Tristan", avatar: "/reviews/tristan-avatar.png", comment: "/reviews/tristan.png" },
+  { name: "Countcarlo", avatar: "/reviews/count-avatar.png", comment: "/reviews/countcarlo.png" },
 ];
 
 function Counter({ number, suffix = "" }: { number: number; suffix?: string }) {
