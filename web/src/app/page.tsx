@@ -24,8 +24,8 @@ const prices = [
 const CONTACT_EMAIL = "supportromalabs@gmail.com";
 
 // TODO: pega aquí tus enlaces reales de Instagram y TikTok
-const INSTAGRAM_URL = "#";
-const TIKTOK_URL = "#";
+const INSTAGRAM_URL = "https://www.instagram.com/romalabs_/";
+const TIKTOK_URL = "https://www.tiktok.com/@romalabss";
 
 export default function Home() {
   const { language, toggleLanguage } = useLanguage();
