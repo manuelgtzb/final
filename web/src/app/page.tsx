@@ -41,7 +41,7 @@ export default function Home() {
           <span></span><span></span><span></span>
         </label>
 
-        <a href="#" className="logo"><img src="/LogoRoma.png" alt="Roma Digital" /></a>
+        <a href="#" className="logo"><img src="/LogoRoma.png" alt="Roma Labs" /></a>
 
         <nav className="nav">
           <a href="#">{t.nav.home}</a>
