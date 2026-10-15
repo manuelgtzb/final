@@ -27,6 +27,7 @@ export const translations = {
       tag: "PRICING", title: "Pick what you need,", titleAccent: "get exactly that.",
       intro: "Transparent starting prices. Final cost may vary depending on scope, integrations and content.",
       paymentLabel: "PAY SECURELY WITH", popular: "MOST POPULAR", or: "or", quote: "GET A QUOTE",
+      promo: { tag: "SPECIAL OFFER", plan: "Starter Landing", price: "$3,500 MXN", oldPrice: "$4,500 MXN", cta: "CLAIM OFFER" },
       plans: [
         {
           name: "Starter Landing", description: "A clean single-page website to present your business and capture leads.",
@@ -57,6 +58,7 @@ export const translations = {
       success: "Valid form. The next step is to connect it to the API.",
     },
     footer: { copyright: "© 2026 Roma Digital. All rights reserved.", emailLabel: "Email" },
+    mailButton: { label: "Email me for a quote", subject: "Quote request - Roma Labs", body: "Hi Roma Labs,\n\nI'd like a quote for a website.\n\nBusiness name:\nWhat I need:\nEstimated budget:\n\nThanks!" },
   },
   es: {
     language: { switchLabel: "Switch language to English", switchTitle: "View site in English" },
@@ -84,6 +86,7 @@ export const translations = {
       tag: "PRECIOS", title: "Elige lo que necesitas,", titleAccent: "recibe exactamente eso.",
       intro: "Precios iniciales transparentes. El costo final puede variar según el alcance, las integraciones y el contenido.",
       paymentLabel: "PAGA DE FORMA SEGURA CON", popular: "MÁS POPULAR", or: "o", quote: "SOLICITAR COTIZACIÓN",
+      promo: { tag: "PROMOCIÓN ESPECIAL", plan: "Landing Inicial", price: "$3,500 MXN", oldPrice: "$4,500 MXN", cta: "APROVECHAR OFERTA" },
       plans: [
         {
           name: "Landing Inicial", description: "Un sitio limpio de una sola página para presentar tu negocio y captar prospectos.",
@@ -114,5 +117,6 @@ export const translations = {
       success: "Formulario válido. El siguiente paso es conectarlo con la API.",
     },
     footer: { copyright: "© 2026 Roma Digital. Todos los derechos reservados.", emailLabel: "Correo electrónico" },
+    mailButton: { label: "Escríbeme para pedir una cotización", subject: "Solicitud de cotización - Roma Labs", body: "Hola Roma Labs,\n\nMe gustaría solicitar una cotización para una página web.\n\nNombre del negocio:\nQué necesito:\nPresupuesto estimado:\n\n¡Gracias!" },
   },
 } as const;
