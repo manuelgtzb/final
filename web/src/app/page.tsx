@@ -21,9 +21,16 @@ const prices = [
   { priceMx: "From $15,000 MXN", priceUsd: "From $870 USD", popular: false },
 ] as const;
 
+const CONTACT_EMAIL = "supportromalabs@gmail.com";
+
+// TODO: pega aquí tus enlaces reales de Instagram y TikTok
+const INSTAGRAM_URL = "#";
+const TIKTOK_URL = "#";
+
 export default function Home() {
   const { language, toggleLanguage } = useLanguage();
   const t = translations[language];
+  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${CONTACT_EMAIL}&su=${encodeURIComponent(t.mailButton.subject)}&body=${encodeURIComponent(t.mailButton.body)}`;
   const localizedPrice = (price: string) => language === "es" ? price.replace("From", "Desde") : price;
 
   return (
@@ -124,6 +131,16 @@ export default function Home() {
           </div>
         </div>
 
+        <a href="#contact" className="promoBanner">
+          <span className="promoTag">{t.pricing.promo.tag}</span>
+          <span className="promoMain">
+            <span className="promoPlan">{t.pricing.promo.plan}</span>
+            <strong className="promoPrice">{t.pricing.promo.price}</strong>
+            <s className="promoOldPrice">{t.pricing.promo.oldPrice}</s>
+          </span>
+          <span className="promoCta">{t.pricing.promo.cta} →</span>
+        </a>
+
         <div className="pricingGrid">
           {t.pricing.plans.map((plan, index) => {
             const price = prices[index];
@@ -150,9 +167,25 @@ export default function Home() {
           <div className="footerSocials">
             <a href="https://discord.com/users/779824297530097675" aria-label="Discord">dc</a>
             <a href="mailto:supportromalabs@gmail.com" aria-label={t.footer.emailLabel}>✉</a>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="socialRound" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" />
+              </svg>
+            </a>
+            <a href={TIKTOK_URL} target="_blank" rel="noreferrer" className="socialRound" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true">
+                <path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48Z" />
+              </svg>
+            </a>
           </div>
         </footer>
       </section>
+
+      <a href={gmailComposeUrl} target="_blank" rel="noreferrer" className="floatingMail" aria-label={t.mailButton.label} title={t.mailButton.label}>
+        <img src="/btncorreo.png" alt="" width={64} height={64} />
+      </a>
     </main>
   );
 }
